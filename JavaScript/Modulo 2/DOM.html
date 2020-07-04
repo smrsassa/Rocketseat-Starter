@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline</title>
+</head>
+<body>
+  
+  <div id="app">
+    <input type="text" name="nome">
+    <button class="botao">Click</button>
+  </div>
+
+  <script>
+    //var inputElemente = document.getElementById('nome');
+    var inputElemente = document.getElementsByTagName('nome')[0];
+    //var inputElemente = document.getElementsByClassName('nome')[0];
+    var inputElemente = document.querySelector('div#app input');
+    var inputElemente = document.querySelector('input[name=nome]');
+    //querySelectorAll
+    var btn = document.querySelector('button');
+    btn.onclick = function () {
+      var text = inputElemente.value;
+      alert(text);
+    }
+  </script>
+
+</body>
+</html>

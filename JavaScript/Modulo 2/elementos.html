@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline</title>
+</head>
+<body>
+  
+  <div id="app">
+    <input id="nome">
+  </div>
+
+  <script>
+    var linkElement = document.createElement('a');
+
+    linkElement.setAttribute('href', 'http://google.com');
+    linkElement.setAttribute('title', 'google');
+
+    var textElement = document.createTextNode('acessar site');
+
+    linkElement.appendChild(textElement);
+
+    var conteiner = document.getElementById("app");
+    conteiner.appendChild(linkElement);
+
+    var input = document.querySelector("#nome");
+    conteiner.removeChild(input);
+  </script>
+
+</body>
+</html>
